@@ -18,7 +18,7 @@ Servo servo;
 int sleepStatus = 0;             // variable to store a request for sleep
 int count = 0;                   // counter for sleeping
 
-int servoPin = 13; //If you don't understand this, kill yourself
+int servoPin = 3; //If you don't understand this, kill yourself
 
 void setup()
 {
@@ -126,7 +126,7 @@ void loop()
 /** Commutate the servo to flip the switch up **/
 void flipUp()
 {
-  servo.attach(3);
+  servo.attach(servoPin);
   servo.writeMicroseconds(SERVO_UP);
   delay(350);
   servo.writeMicroseconds(SERVO_MID);
@@ -137,7 +137,7 @@ void flipUp()
 /** Commutate the servo to flip the switch up **/
 void flipDown()
 {
-  servo.attach(3);
+  servo.attach(servoPin);
   servo.writeMicroseconds(SERVO_DOWN);
   delay(350);
   servo.writeMicroseconds(SERVO_MID);
